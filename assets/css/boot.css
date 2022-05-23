@@ -1,0 +1,134 @@
+     body {
+        margin: 0;
+        animation: fadeInAnimation ease 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+  }
+  
+  section {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  p {
+    margin: 0;
+    line-height: 1.5em;
+  }
+  
+  .blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  }
+  
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  
+  .actions {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .float-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 2em;
+  }
+  
+  #bios {
+    display: block;
+    background: #000;
+    color: #1dd320;
+    font-family: "Courier New", Courier, monospace;
+  }
+#cpn {
+  color:#ccc;
+}
+  #loader {
+    display: none;
+    background: #000;
+    color: #ccc;
+  }
+  
+  .loader {
+    position: relative;
+    padding-top: 100px;
+    width: 40px;
+    margin: auto;
+  
+  }
+  .circle {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    opacity: 0;
+    transform: rotate(225deg);
+    animation-iteration-count: infinite;
+    animation-name: orbit;
+    animation-duration: 5.5s;
+  }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 5px;
+      background: #fff; /* Pick a color */
+    }
+    
+    &:nth-child(2) {  animation-delay: 240ms; }
+    &:nth-child(3) {  animation-delay: 480ms; }
+    &:nth-child(4) {  animation-delay: 720ms; }
+    &:nth-child(5) {  animation-delay: 960ms; }
+  
+  @keyframes orbit { 
+    0%   { transform:rotate(225deg); opacity: 1;
+           animation-timing-function: ease-out; } 
+      
+    7%   { transform:rotate(345deg);
+           animation-timing-function: linear; }
+      
+    30%   { transform:rotate(455deg);
+            animation-timing-function: ease-in-out; }
+      
+    39%   { transform:rotate(690deg);
+            animation-timing-function: linear; }
+      
+    70%   { transform:rotate(815deg); opacity: 1;
+           animation-timing-function: ease-out; }
+      
+    75%   { transform:rotate(945deg); 
+           animation-timing-function: ease-out; }
+      
+    76% { transform:rotate(945deg); opacity: 0; }
+    100% { transform:rotate(945deg); opacity: 0; } 
+  }
+    @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+       }
+  }
+
+* {
+  cursor: not-allowed;
+  user-select: none;
+  overflow: none;
+  }
+#stamp {
+  color: ; 
+}
+#cpwarn {
+  color: red;
+}

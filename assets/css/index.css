@@ -1,0 +1,384 @@
+body {
+    background-color: #121212;
+    overflow: hidden;
+    animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    user-select: none;
+
+
+}
+
+.mockWindowsIcon{
+    position: absolute;
+    top: 50%;
+    right: 65%;
+    transform: translate(50%, -50%);
+    border-right: #ffffff solid 0.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 8;
+    user-select: none;
+
+}
+
+.clock{
+    position: absolute;
+    top: 50%;
+    right: 43%;
+    transform: translate(50%, -50%);
+    color: white;
+    font-size: 60px;
+    font-family: Inconsolata, "Cascadia Code", Consolas, monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    user-select: none;
+    padding-left: 25px;
+}
+
+
+
+/* App container, and apps within */
+.appchoiceContainer{
+    background-color: #1c9a54;
+    width: 100%;
+    height: 55px;
+    margin: 0;
+    padding: auto;
+    box-shadow: 0 6px 8px rgb(0 0 0 / 20%);
+    z-index: 10;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    display: flex;
+    border: none;
+}
+/*
+.mockwinlogo{
+    we could do smth here
+}
+*/
+
+
+.app{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    bottom: 0;
+    /*border: rgba(0, 0, 0, 0.082) solid 1px;*/
+    /* add some spacing */
+    user-select: none;
+
+}
+
+.mockwinmenu{
+    background-color: #1c9a54;
+    width: 3%;
+    height: 25%;
+    margin: 0;
+    padding: auto;
+    box-shadow: 0 6px 8px rgb(0 0 0 / 20%);
+    z-index: 9;
+    overflow: hidden;
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    display: flex;
+    border: none;
+    flex-direction: column;
+
+}
+
+.menu{
+    width: 50px;
+    height: 50px;
+    background-color: #1c9a54;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.search-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #1c9a54;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.games-ico{
+    height: 40px;
+    top: 50%;
+    transform: translate(0, 20%);
+    user-select: none;
+
+}
+
+.exploit-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #1c9a54;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+.chat-icon{
+    height: 50px;
+    background-color: #1c9a54;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+.settings-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #1c9a54;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.discord-ico {
+    height: 50px;
+    background-color: #1c9a54;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+
+.terminal-icon{
+    height: 50px;
+    background-color: #1c9a54;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/*
+Don't need right now
+.apps p{
+    color: #fff;
+    font-size: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+*/
+
+
+
+
+/* Animation classes */
+
+.slide-in{
+    animation: slidein 0.5s forwards;; 
+}
+.slide-out{
+    animation: slideout 0.5s forwards;; 
+}
+
+
+.opacitydown{
+    animation: opacitydown 0.5s forwards;
+}
+
+
+@keyframes slidein {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideout {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+}
+
+@keyframes opacitydown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes opacityup {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+   .context-menu {
+        z-index: 999999999999;
+        color: #22ec7d;
+        position: absolute;
+        text-align: center;
+        background: #1c9a54;
+        border: 1px solid #1fd671;
+    }
+  
+    .context-menu ul {
+        color: #22ec7d;
+        padding: 0px;
+        margin: 0px;
+        min-width: 150px;
+        list-style: none;
+    }
+  
+    .context-menu ul li {
+        padding-bottom: 7px;
+        padding-top: 7px;
+        border: 1px solid #1fd671;
+    }
+  
+    .context-menu ul li a {
+        text-decoration: none;
+        color: #1fd671;
+    }
+  
+    .context-menu ul li:hover {
+        background: #0d4a27;
+    }
+#DefaultBImage {
+   -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+#HomeButton {
+    -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+#dTime {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+* {
+  cursor: url(https://www.freeiconspng.com/thumbs/cursor-png/white-mouse-cursor-arrow-by-qubodup-11.png), auto; 
+}
