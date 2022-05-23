@@ -1,0 +1,62 @@
+<!-- Copyright Nebula Services 2022 -->
+<!-- Any unauthorized use of this code is strickly prohibited -->
+<!-- Made by ZDC @ Nebula Services and Komodo Development --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<img src="/assets/img/bird.svg" width="150px" height="100px" id="clumsy"></img>
+  <img src="/assets/img/minecraft.jpg" width="150px" height="100px" id="mc"></img>
+    <img src="/assets/img/2048.svg" width="150px" height="100px" id="2048"></img>
+      <img src="/assets/img/pacman.jpg" width="150px" height="100px" id="pacman"></img>
+  <style>
+    img {
+      height: 200px;
+      width: 150px;
+      transition: 0.2s;
+      border-style: solid;
+      border-color: white;
+      padding: 20px;
+      text-align: center;
+      left: 50%;
+      margin: 10px;
+    }
+    img:hover {
+      height: 220px;
+      width: 155px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+  let bird =  document.getElementById("clumsy")
+  let minecraft = document.getElementById("mc")
+  let numbergame = document.getElementById("2048")
+  let pacman = document.getElementById("pacman")
+    bird.onclick = () => {
+      window.location.href="https://komodo-dev.term7.repl.co/assets/Games/clumsy/index.html"
+    }
+    numbergame.onclick = () => {
+      window.location.href="https://komodo-dev.term7.repl.co/assets/Games/2048/index.html"
+    }
+    minecraft.onclick = () => {
+      window.location.href="https://komodo-dev.term7.repl.co/assets/Games/minecraft/index.html"
+    }
+    pacman.onclick = () => {
+      window.location.href="https://komodo-dev.term7.repl.co/assets/Games/pacman/index.html"
+    }
+    
+  </script>
+    <style>
+    body {
+      background-color: #383838;
+    }
+  </style>
+</body>
+</html>

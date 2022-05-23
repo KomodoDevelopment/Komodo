@@ -1,0 +1,85 @@
+<!-- Copyright Nebula Services 2022 -->
+<!-- Any unauthorized use of this code is strickly prohibited -->
+<!-- Made by ZDC @ Nebula Services and Komodo Development --> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komodo Development</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/komodoBG.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/9513f4fc9a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/libs/css/winbox.min.css">
+    <script src="/assets/libs/js/winbox.min.js"></script>
+  </head>
+  <body onload="console.log('%cMade with love from the komodo developer team 💚', 'font-size:20px;')">
+    <!-- Default BG --> 
+    <div class="background">
+      <img
+        id="DefaultBImage"
+        class="mockWindowsIcon"
+        src="/assets/img/komodoBG.png"
+        alt="background"
+      />
+      <div id="dTime" class="clock" onload="currentTime()"></div>
+    <div class="appchoiceContainer">
+    <div class="menu">
+      <img
+        id="HomeButton"
+        class="komodo-winlogo"
+        src="/assets/img/komodo_winlogo.png"
+        alt="Komodo logo"
+        onclick="menu();"
+        style="width: 4.5em; height: 4.5em;"
+      />
+    </div>
+      <i class="search-icon fa-solid fa-magnifying-glass fa-2xl"></i>
+      <div class="app">
+        <img class="games-ico" src="/assets/img/game.png" alt="game.png" />
+        <!--<p>Games</p>-->
+      </div>
+      <div class="app">
+        <i class="exploit-icon fa-solid fa-clipboard fa-2xl" onclick="exploits();"></i>
+      </div>
+      <div class="app">
+        <i class="chat-icon fa-solid fa-comment-dots fa-2xl " onclick="chat();" ></i>
+      </div>
+      <div class="app">
+        <i class="discord-ico fa-brands fa-discord fa-2xl" onclick="discord();"></i>
+      </div>
+      <div class="app">
+        <i
+          class="settings-icon fa-solid fa-gears fa-2xl"
+          onclick="settings();"
+        ></i>
+      </div>
+    <div class="app">
+       <i
+          class="terminal-icon fa-solid fa-rectangle-terminal fa-2x1"
+          onclick="terminal();"
+        ></i>
+      </div>
+      </div>
+      <div id="contextMenu" class="context-menu" 
+    style="display: none">
+    <ul>
+      <!-- <li><a href="assets/pages/boot.html">Reboot</a></li> -->
+        <li><a href="https://discord.gg/zfBJ4hKCWz">Support</a></li>
+    </ul>
+</div>
+    <script src="/assets/js/page.js"></script>
+    <script src="/assets/js/h2c.min.js"></script>
+    <script src="/assets/js/ss.js"></script>
+    </div>
+  </body>
+</html>
