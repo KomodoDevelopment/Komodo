@@ -1,2 +1,2 @@
 # Komodo
-Komodo repo
+Komodo is cool
