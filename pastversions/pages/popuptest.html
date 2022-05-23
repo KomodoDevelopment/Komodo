@@ -1,0 +1,64 @@
+<!-- Copyright Nebula Services 2022 -->
+<!-- Any unauthorized use of this code is strickly prohibited -->
+<!-- Made by ZDC @ Nebula Services and Komodo Development --> 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window Test</title>
+
+	<meta charset="UTF-8" />
+
+	<link rel="stylesheet" href="/assets/css/window.css" />
+	<script src="/assets/js/window.js"></script>
+
+	<style>
+		*{
+			box-sizing: border-box;
+			position: relative;
+		}
+
+		html, body{
+			height: 100%;
+			font-family: sans-serif;
+		}
+
+		h1{
+			font-size: 2em;
+			margin: 0.5em 0;
+		}
+
+		body{
+			padding: 5px;
+			margin: 0;
+		}
+
+		#mycontent{
+			padding: 10px;
+			text-align: justify;
+		}
+	</style>
+
+	<script>
+		var win;
+
+		window.onload = function(){
+			win = new Window("Title", {
+				state: WindowState.NORMAL,
+				size: {
+					width: 500,
+					height: 250
+				},
+				selected: true,
+			});
+
+			win.content.id = "mycontent";
+			win.content.innerHTML = '<iframe src="https://komodo-dev.term7.repl.co">';
+		};
+	</script>
+</head>
+
+<body>
+	<button onclick="win.show();">Show</button>
+	<button onclick="win.reload();">Reload</button>
+</body>
+</html>

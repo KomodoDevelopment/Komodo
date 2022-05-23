@@ -1,0 +1,323 @@
+<!-- Copyright Nebula Services 2022 -->
+<!-- Any unauthorized use of this code is strickly prohibited -->
+<!-- Made by ZDC @ Nebula Services and Komodo Development --> 
+<!DOCTYPE html> 
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="title">
+<strong><h1>Komodo Alpha</h1></strong>
+    </div>
+<h5>Build:v0.1.1 Codename:Chimera</h5>
+      <style link="/assets/css/beta.css" ref="stylesheet"></style>
+    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+    </div>
+<div class="footer">
+<i><img src="/assets/img/earth.svg" id="btn_popup"></img></i>
+<i><img src="/assets/img/game.png" id="btn_popup1"></img></i>
+<i><img src="/assets/img/clipboard.svg" id="btn_popup2"></img></i>
+<i><img src="/assets/img/chat.svg" id="btn_popup4"></img></i>
+<i><img src="/assets/img/gear.svg" id="btn_popup5"></img></i>
+<div id = "clock" onload="currentTime()"></div>
+    <div id="smoke" style="display:none;position:absolute;top:-30px;left:-30px;opacity:0.3;background-color:black;">...</div>
+    <div id="popup" class="resizable" style="display:none;background-color:green;position:absolute;top:0px;z-index:9999;box-shadow: 6px 6px 5px #888888;border-radius:6px;border:1px solid #4f4f4f;
+">
+<style>
+  .resizable {
+	resize: both;
+	overflow: auto;
+	display: flex;
+}
+.resizable > * {
+	flex: 5;
+}
+</style>
+      <div id="popup_bar" style="width:200px;background-color:#1c9a54;position:relative;top:0;border-radius:6px 6px 0 0; text-align:center;height:24px;cursor:move">Browser<span id="btn_close" style="float:right;cursor:pointer;padding-right:6px;">X</span>
+</div>
+<iframe src="https://r.vyslix.com/" 
+    style="
+      position: center;
+      top: 0px;
+      right: 0px;
+      top: 0px;
+      height: 96%;
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      z-index: 1;
+
+  ">
+</iframe>
+</div>
+
+        <div id="smoke1" style="display:none;position:absolute;top:-30px;left:-30px;opacity:0.3;background-color:black;z-index:9998">...</div>
+    <div id="popup1" class="resizable" style="display:none;background-color:green;position:absolute;top:0px;z-index:9999;box-shadow: 6px 6px 5px #888888;border-radius:6px;border:1px solid #4f4f4f;">
+      <div id="popup_bar1" style="width:200px;background-color:#1c9a54;position:relative;top:0;border-radius:6px 6px 0 0; text-align:center;height:24px;cursor:move">Games<span id="btn_close1" style="float:right;cursor:pointer;padding-right:6px;">X</span>
+</div>
+      <iframe src="/pages/games.html"
+    style="
+      position: center;
+      top: 0px;
+      right: 0px;
+      top: 0px;
+      height: 96%;
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      z-index: 1;
+  ">
+</iframe>
+    </div>
+        <div id="smoke2" style="display:none;position:absolute;top:-30px;left:-30px;opacity:0.3;background-color:black;z-index:9998">...</div>
+    <div id="popup2" class="resizable"  style="display:none;background-color:green;position:absolute;top:0px;z-index:9999;box-shadow: 6px 6px 5px #888888;border-radius:6px;border:1px solid #4f4f4f;">
+      <div id="popup_bar2" style="width:200px;background-color:#1c9a54;position:relative;top:0;border-radius:6px 6px 0 0; text-align:center;height:24px;cursor:move">Exploits<span id="btn_close2" style="float:right;cursor:pointer;padding-right:6px;">X</span>   
+</div>
+<iframe src="/pages/exploits.html"
+    style="
+      position: center;
+      top: 0px;
+      right: 0px;
+      top: 0px;
+      height: 96%;
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      z-index: 1;
+
+  
+  ">
+</iframe>
+</div>
+    <div id="smoke3" style="display:none;position:absolute;top:-30px;left:-30px;opacity:0.3;background-color:black;z-index:9998">...</div>
+    <div id="popup3" class="resizable" style="display:none;background-color:green;position:absolute;top:0px;z-index:9999;box-shadow: 6px 6px 5px #888888;border-radius:6px;border:1px solid #4f4f4f;">
+      <div id="popup_bar3" style="width:200px;background-color:#1c9a54;position:relative;top:0;border-radius:6px 6px 0 0; text-align:center;height:24px;cursor:move">Games<span id="btn_close3" style="float:right;cursor:pointer;padding-right:6px;">X</span>
+</div>
+      <iframe src="/pages/browser.html"
+    style="
+      position: center;
+      top: 0px;
+      right: 0px;
+      top: 0px;
+      height: 96%;
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      z-index: 1;
+  ">
+</iframe>
+    </div>
+        <div id="smoke4" style="display:none;position:absolute;top:-30px;left:-30px;opacity:0.3;background-color:black;z-index:9998">...</div>
+    <div id="popup4" class="resizable" style="display:none;background-color:green;position:absolute;top:0px;z-index:9999;box-shadow: 6px 6px 5px #888888;border-radius:6px;border:1px solid #4f4f4f;">
+      <div id="popup_bar4" style="width:200px;background-color:#1c9a54;position:relative;top:0;border-radius:6px 6px 0 0; text-align:center;height:24px;cursor:move">Chatbox<span id="btn_close4" style="float:right;cursor:pointer;padding-right:6px;">X</span>
+</div>
+      <iframe src="https://khat.term7.repl.co"
+    style="
+      position: center;
+      top: 0px;
+      right: 0px;
+      top: 0px;
+      height: 96%;
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      z-index: 1;
+  ">
+</iframe>
+    </div>
+      <div id="smoke5" style="display:none;position:absolute;top:-30px;left:-30px;opacity:0.3;background-color:black;z-index:9998">...</div>
+    <div id="popup5" class="resizable" style="display:none;background-color:green;position:absolute;top:0px;z-index:9999;box-shadow: 6px 6px 5px #888888;border-radius:6px;border:1px solid #4f4f4f;
+">
+      <div id="popup_bar5" style="width:200px;background-color:#1c9a54;position:relative;top:0;border-radius:6px 6px 0 0; text-align:center;height:24px;cursor:move">Settings<span id="btn_close5" style="float:right;cursor:pointer;padding-right:6px;">X</span>
+</div>
+<iframe src="/pages/settings.html" 
+    style="
+      position: center;
+      top: 0px;
+      right: 0px;
+      top: 0px;
+      height: 96%;
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      z-index: 1;
+
+  ">
+</iframe>
+</div>
+    <style>
+      
+  /* html { 
+  background: url(/assets/img/komodotransparent.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background-color: #121212;
+}*/
+body {
+  background: url(/assets/img/komodotransparent.png) no-repeat center center fixed;
+font-family: Monospace;
+background-color: #121212;
+color: #1c9a54;
+
+}
+.footer {
+  font-family: Monospace;
+  position: fixed;
+  left: 400px;
+  bottom: 5px;
+  width: 50%;
+  margin: 5px;
+  background-color: #1c9a54;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+  
+}
+img {
+  width: 50px;
+  height: 50px;
+  transition: 0.2s; 
+  padding: 5px;
+}
+
+img:hover {
+  width: 60px;
+  height: 60px;
+  transition: 0.2s; 
+}
+      
+h1 {
+text-align: center;
+  font-size: 3.5vw;
+  position: relative;
+  width: max-content; 
+  font-weight: normal;
+}
+h1:before, h1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+h1::before {
+  background-color: #121212;
+  animation: write 2.5s steps(25) 0.5s forwards; /* Number of steps */
+  width: 100%;
+}
+h1::after {
+  opacity: 1;
+  width: 0.15em; 
+  background: black;
+  animation: write 2.5s steps(25) 0.5s forwards, blink 0.75s steps(2) infinite;
+}
+p {
+  font-size: 2.3vw;
+  opacity: 0.4;
+color: #1c9a54;
+}
+.bold {
+  font-weight: 600;
+}
+@keyframes write {
+  to {
+    left: 100%;
+  }
+  
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  } 
+  49.9% {
+     opacity: 0;
+  }
+  50% {
+     opacity: 1;
+  }
+  100% {
+     opacity: 1;
+  }
+}
+
+a:link {
+  color: #29e07b;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #28d777;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7bf4b2;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #2bd477;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.button {
+  border-radius: 12px;
+  font-family: Monospace;
+  background-color: #2d7c2f; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#github-logo {
+font-size: 40px;
+font-weight: normal;
+}
+
+#discord-logo {
+font-size: 40px;
+font-weight: normal;
+}
+</style>
+    <script src="/assets/js/browser.js"></script>
+    <script src="/assets/js/popup.js"></script>
+    <script src="/assets/js/browserpopup.js"></script>
+    <script src="/assets/js/exploitpopup.js"></script>
+    <script src="/assets/js/exploits.js"></script>
+    <script src="/assets/js/main.js"</script>
+	  <script src="/assets/js/window.js"></script>
+    <script src="/assets/js/chatpopup.js"></script>
+    <script src="/assets/js/clock.js"></script>
+    <script src="/assets/js/settingspopup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="/assets/js/temp.js"></script>
+  </body>
+</html>
